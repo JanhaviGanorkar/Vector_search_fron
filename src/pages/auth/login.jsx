@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-// import { loginUser } from "@/lib/api"
+import { loginUser } from "@/lib/api"
 
 export default function Login() {
   const [formData, setFormData] = useState({

@@ -1,8 +1,6 @@
-
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-
-export async function searchDocuments(query) {
+async function searchDocuments(query) {
   try {
     const response = await fetch(`${API_BASE_URL}/documents/search`, {
       method: 'POST',
@@ -24,7 +22,7 @@ export async function searchDocuments(query) {
   }
 }
 
-export async function addDocument(title, content) {
+async function addDocument(title, content) {
   try {
     const response = await fetch(`${API_BASE_URL}/documents`, {
       method: 'POST',
@@ -83,3 +81,10 @@ async function registerUser(userData) {
     throw error;
   }
 }
+
+export {
+  searchDocuments,
+  addDocument,
+  loginUser,
+  registerUser
+};
